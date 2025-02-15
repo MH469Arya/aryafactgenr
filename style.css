@@ -1,0 +1,17 @@
+body {
+    font-family: sans-serif;
+  }
+  
+  h1, h2 {
+    text-align: center;
+  }
+  
+  #addNoteSection, #notesContainer {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: 20px auto;
+    width: 50%;
+  }
+  
+  /* Add more styles for aesthetics */
+  

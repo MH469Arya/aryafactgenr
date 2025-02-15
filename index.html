@@ -1,72 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mango Fun Facts Generator</title>
-    <style>
-        /* CSS styles here */
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
-            text-align: center;
-        }
-
-        header {
-            background-color: #333;
-            color: #fff;
-            padding: 10px 0;
-        }
-
-        h1 {
-            margin: 0;
-        }
-
-        #fun-fact-display {
-            margin-top: 20px;
-        }
-
-        button {
-            padding: 10px 20px;
-            background-color: #007bff;
-            color: #fff;
-            border: none;
-            cursor: pointer;
-        }
-
-        button:hover {
-            background-color: #0056b3;
-        }
-    </style>
+  <title>Student Study Notes</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Mango Fun Facts Generator</h1>
-    </header>
-    <main>
-        <section id="fun-fact-display">
-            <p id="fun-fact">Click the button to generate a fun fact about mangoes!</p>
-            <button id="generate-btn">Generate Fun Fact</button>
-        </section>
-    </main>
-    <script>
-        // JavaScript code here
-        const facts = [
-            "Mangoes are the most widely consumed fruit in the world.",
-            "There are over 1,000 different varieties of mangoes.",
-            "Mangoes are related to cashews and pistachios.",
-            "Mango leaves are considered sacred in Hindu culture.",
-            "Mangoes are rich in vitamins A, C, and E."
-        ];
+  <h1>Study Notes Sharing</h1>
 
-        const generateBtn = document.getElementById('generate-btn');
-        const funFactDisplay = document.getElementById('fun-fact');
+  <div id="addNoteSection">
+    <h2>Add Your Notes</h2>
+    <label for="noteTitle">Note Title:</label><br>
+    <input type="text" id="noteTitle" name="noteTitle"><br><br>
+    <label for="noteContent">Enter your notes here:</label><br>
+    <textarea id="noteContent" name="noteContent"></textarea><br><br>
+    <button onclick="addNote()">Submit Note</button>
+  </div>
 
-        generateBtn.addEventListener('click', () => {
-            const randomFact = facts[Math.floor(Math.random() * facts.length)];
-            funFactDisplay.textContent = randomFact;
-        });
-    </script>
+  <div id="notesContainer">
+    <h2>Shared Notes</h2>
+    <!-- Notes will be displayed here -->
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
